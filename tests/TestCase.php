@@ -1,10 +1,10 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch\Tests;
+namespace ChrisReedIO\SecureMeilisearch\Filament\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use ChrisReedIO\FilamentSecureMeilisearch\FilamentSecureMeilisearchServiceProvider;
+use ChrisReedIO\SecureMeilisearch\Filament\FilamentSecureMeilisearchServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;

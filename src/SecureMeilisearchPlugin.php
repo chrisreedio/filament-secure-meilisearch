@@ -1,11 +1,12 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch;
+namespace ChrisReedIO\SecureMeilisearch\Filament;
 
+use ChrisReedIO\SecureMeilisearch\Filament\Resources\SearchKeyResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class FilamentSecureMeilisearchPlugin implements Plugin
+class SecureMeilisearchPlugin implements Plugin
 {
     public function getId(): string
     {
@@ -14,7 +15,9 @@ class FilamentSecureMeilisearchPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        //
+        $panel->resources([
+            SearchKeyResource::class,
+        ]);
     }
 
     public function boot(Panel $panel): void

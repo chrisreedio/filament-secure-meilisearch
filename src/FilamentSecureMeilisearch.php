@@ -1,5 +1,5 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch;
+namespace ChrisReedIO\SecureMeilisearch\Filament;
 
 class FilamentSecureMeilisearch {}

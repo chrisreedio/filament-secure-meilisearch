@@ -1,9 +1,9 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch;
+namespace ChrisReedIO\SecureMeilisearch\Filament;
 
-use ChrisReedIO\FilamentSecureMeilisearch\Commands\FilamentSecureMeilisearchCommand;
-use ChrisReedIO\FilamentSecureMeilisearch\Testing\TestsFilamentSecureMeilisearch;
+use ChrisReedIO\SecureMeilisearch\Filament\Commands\FilamentSecureMeilisearchCommand;
+use ChrisReedIO\SecureMeilisearch\Filament\Testing\TestsFilamentSecureMeilisearch;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -32,17 +32,18 @@ class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
         $package->name(static::$name)
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('chrisreedio/filament-secure-meilisearch');
+                //
+                // $command;
+                // ->publishConfigFile()
+                // ->publishMigrations()
+                // ->askToRunMigrations()
+                // ->askToStarRepoOnGitHub('chrisreedio/filament-secure-meilisearch');
             });
 
-        $configFileName = $package->shortName();
+        $configFileName = 'secure-meilisearch-filament';
 
         if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
-            $package->hasConfigFile();
+            $package->hasConfigFile($configFileName);
         }
 
         if (file_exists($package->basePath('/../database/migrations'))) {
@@ -58,7 +59,9 @@ class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void {}
+    public function packageRegistered(): void
+    {
+    }
 
     public function packageBooted(): void
     {
@@ -78,7 +81,7 @@ class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/filament-secure-meilisearch/{$file->getFilename()}"),
                 ], 'filament-secure-meilisearch-stubs');
@@ -101,8 +104,10 @@ class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-secure-meilisearch', __DIR__ . '/../resources/dist/components/filament-secure-meilisearch.js'),
-            Css::make('filament-secure-meilisearch-styles', __DIR__ . '/../resources/dist/filament-secure-meilisearch.css'),
-            Js::make('filament-secure-meilisearch-scripts', __DIR__ . '/../resources/dist/filament-secure-meilisearch.js'),
+            // Css::make('filament-secure-meilisearch-styles',
+            //     __DIR__.'/../resources/dist/filament-secure-meilisearch.css'),
+            // Js::make('filament-secure-meilisearch-scripts',
+            //     __DIR__.'/../resources/dist/filament-secure-meilisearch.js'),
         ];
     }
 

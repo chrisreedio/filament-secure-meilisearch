@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch\Testing;
+namespace ChrisReedIO\SecureMeilisearch\Filament\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

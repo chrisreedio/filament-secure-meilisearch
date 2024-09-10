@@ -1,16 +1,16 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch\Facades;
+namespace ChrisReedIO\SecureMeilisearch\Filament\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \ChrisReedIO\FilamentSecureMeilisearch\FilamentSecureMeilisearch
+ * @see \ChrisReedIO\SecureMeilisearch\Filament\FilamentSecureMeilisearch
  */
 class FilamentSecureMeilisearch extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \ChrisReedIO\FilamentSecureMeilisearch\FilamentSecureMeilisearch::class;
+        return \ChrisReedIO\SecureMeilisearch\Filament\FilamentSecureMeilisearch::class;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch\Database\Factories;
+namespace ChrisReedIO\SecureMeilisearch\Filament\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ChrisReedIO\FilamentSecureMeilisearch\Commands;
+namespace ChrisReedIO\SecureMeilisearch\Filament\Commands;
 
 use Illuminate\Console\Command;
 

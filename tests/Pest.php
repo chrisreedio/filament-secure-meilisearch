@@ -1,5 +1,5 @@
 <?php
 
-use ChrisReedIO\FilamentSecureMeilisearch\Tests\TestCase;
+use ChrisReedIO\SecureMeilisearch\Filament\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -21,6 +21,7 @@
     ],
     "require": {
         "php": "^8.1",
+        "chrisreedio/laravel-secure-meilisearch": "dev-main",
         "filament/filament": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
@@ -39,13 +40,13 @@
     },
     "autoload": {
         "psr-4": {
-            "ChrisReedIO\\FilamentSecureMeilisearch\\": "src/",
-            "ChrisReedIO\\FilamentSecureMeilisearch\\Database\\Factories\\": "database/factories/"
+            "ChrisReedIO\\SecureMeilisearch\\Filament\\": "src/",
+            "ChrisReedIO\\SecureMeilisearch\\Filament\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ChrisReedIO\\FilamentSecureMeilisearch\\Tests\\": "tests/"
+            "ChrisReedIO\\SecureMeilisearch\\Filament\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -59,19 +60,26 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ChrisReedIO\\FilamentSecureMeilisearch\\FilamentSecureMeilisearchServiceProvider"
+                "ChrisReedIO\\SecureMeilisearch\\Filament\\FilamentSecureMeilisearchServiceProvider"
             ],
             "aliases": {
-                "FilamentSecureMeilisearch": "ChrisReedIO\\FilamentSecureMeilisearch\\Facades\\FilamentSecureMeilisearch"
+                "FilamentSecureMeilisearch": "ChrisReedIO\\SecureMeilisearch\\Filament\\Facades\\FilamentSecureMeilisearch"
             }
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../laravel/laravel-secure-meilisearch"
+        }
+    ]
 }
