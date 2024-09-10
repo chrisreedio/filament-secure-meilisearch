@@ -16,9 +16,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Carbon;
 
-use function __;
-use function config;
-
 class SearchKeyResource extends Resource
 {
     protected static ?string $model = SearchKey::class;
