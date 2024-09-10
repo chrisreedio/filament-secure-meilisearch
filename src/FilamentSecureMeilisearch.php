@@ -2,6 +2,4 @@
 
 namespace ChrisReedIO\FilamentSecureMeilisearch;
 
-class FilamentSecureMeilisearch
-{
-}
+class FilamentSecureMeilisearch {}

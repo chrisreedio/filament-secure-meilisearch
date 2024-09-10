@@ -2,6 +2,8 @@
 
 namespace ChrisReedIO\FilamentSecureMeilisearch;
 
+use ChrisReedIO\FilamentSecureMeilisearch\Commands\FilamentSecureMeilisearchCommand;
+use ChrisReedIO\FilamentSecureMeilisearch\Testing\TestsFilamentSecureMeilisearch;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -13,8 +15,6 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ChrisReedIO\FilamentSecureMeilisearch\Commands\FilamentSecureMeilisearchCommand;
-use ChrisReedIO\FilamentSecureMeilisearch\Testing\TestsFilamentSecureMeilisearch;
 
 class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
 {
@@ -58,9 +58,7 @@ class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void
-    {
-    }
+    public function packageRegistered(): void {}
 
     public function packageBooted(): void
     {
@@ -88,7 +86,7 @@ class FilamentSecureMeilisearchServiceProvider extends PackageServiceProvider
         }
 
         // Testing
-        Testable::mixin(new TestsFilamentSecureMeilisearch());
+        Testable::mixin(new TestsFilamentSecureMeilisearch);
     }
 
     protected function getAssetPackageName(): ?string
