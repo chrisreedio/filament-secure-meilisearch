@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ChrisReedIO\FilamentSecureMeilisearch\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentSecureMeilisearchCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-secure-meilisearch';
 
     public $description = 'My command';
 
